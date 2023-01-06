@@ -2,6 +2,9 @@
 
 echo Huuymas
 
+echo Tuning .bashrc
+echo -e "alias k=kubectl\nalias ll=\"ls -la\"" >> /root/.bashrc
+
 echo Updating the /etc/apt/sources.list
 echo -e "deb http://mirror.yandex.ru/debian sid main contrib non-free\ndeb-src http://mirror.yandex.ru/debian sid main contrib non-free" >> /etc/apt/sources.list
 
