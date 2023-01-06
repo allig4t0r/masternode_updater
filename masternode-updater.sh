@@ -4,8 +4,6 @@ echo Huuymas
 
 echo Tuning .bashrc
 echo -e "alias k=kubectl\nalias ll=\"ls -la\"" >> /root/.bashrc
-echo Reload bash
-exec bash
 
 echo HUY
 
@@ -38,6 +36,8 @@ apt upgrade -y
 
 echo Installing kubelet kubeadm kubectl containerd netcat
 apt-get install -y kubelet kubeadm kubectl containerd netcat
-echo Placing hold on these packages
+echo Placing hold on some packages
 apt-mark hold kubelet kubeadm kubectl
 
+echo Reload bash
+exec bash
